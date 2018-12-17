@@ -57,7 +57,6 @@ public class AppUtils {
     //Returns JsonPath object
     public static JsonPath getJSonPath (Response res) {
         String json = res.asString();
-        //System.out.print("returned json: " + json +"\n");
         return new JsonPath(json);
     }
 }

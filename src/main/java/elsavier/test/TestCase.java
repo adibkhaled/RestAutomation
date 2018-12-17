@@ -1,6 +1,5 @@
 package elsavier.test;
 
-import org.junit.Assert;
 import org.junit.Test;
 import elsavier.main.Utils.*;
 
