@@ -1,1 +1,8 @@
 # ElsavierRestAutomation
+
+This is Elsevier Project for exercise. 
+This project is maven project using with rest-assured 3.2.0 and Junit 4.0
+This send rest api data to https://bitly.com to test following method:
+- /v3/user/info
+- /v3/user/link_history
+- /v3/shorten
