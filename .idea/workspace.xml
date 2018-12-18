@@ -223,7 +223,7 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="TestCase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Elsavier" />
+      <module name="Elsevier" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="elsevier.test.*" />
@@ -246,7 +246,7 @@
       <patterns />
     </configuration>
     <configuration name="TestCase.TestCase02_GetUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Elsavier" />
+      <module name="Elsevier" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="elsevier.test.*" />
@@ -269,7 +269,7 @@
       <patterns />
     </configuration>
     <configuration name="TestCase.TestCase_CheckShortenLongURL" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Elsavier" />
+      <module name="Elsevier" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="elsevier.test.*" />
@@ -292,7 +292,7 @@
       <patterns />
     </configuration>
     <configuration name="TestCase.TestCase_GetUserHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Elsavier" />
+      <module name="Elsevier" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="elsevier.test.*" />
@@ -315,7 +315,7 @@
       <patterns />
     </configuration>
     <configuration name="TestCase.TestCase_UserInfoResponseStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Elsavier" />
+      <module name="Elsevier" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="elsevier.test.*" />
