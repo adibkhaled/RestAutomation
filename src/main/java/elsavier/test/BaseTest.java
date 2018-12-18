@@ -1,6 +1,7 @@
 package elsavier.test;
 
 import elsavier.test.TestUtils.*;
+import elsavier.config.Configuration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -11,7 +12,6 @@ import io.restassured.response.Response;
 import elsavier.main.Utils.*;
 
 
-
 public class BaseTest {
 
     public Response res = null; //Response
@@ -19,17 +19,20 @@ public class BaseTest {
 
     //Instantiate a Helper Test Methods (testUtils) Object
     TestUtils testUtils = new TestUtils();
+    //Instantiate a Helper Test Methods (conf) Object
+    Configuration conf = new Configuration();
+
 
     @Before
-    public void setup (){
+    public void setup() {
         //Test Setup
-        AppUtils.setBaseURI("https://api-ssl.bitly.com"); //Setup Base URI
-        AppUtils.setBasePath("v3"); //Setup Base Path
+        AppUtils.setBaseURI(conf.baseURL); //Setup Base URI
+        AppUtils.setBasePath(conf.basePath); //Setup Base Path
         AppUtils.setContentType(ContentType.JSON); //Setup Content Type
     }
 
     @After
-    public void afterTest (){
+    public void afterTest() {
         //Reset Values
         AppUtils.resetBaseURI();
         AppUtils.resetBasePath();

@@ -4,48 +4,76 @@ import org.junit.Test;
 import elsavier.main.Utils.*;
 
 
-
-public class TestCase extends BaseTest{
+public class TestCase extends BaseTest {
 
     @Test
     public void TestCase_UserInfoResponseStatus() {
-        //Verify the http User Info response status returned. Check Status Code is 200?
-        res = AppUtils.getResponseByPath("/user/info?access_token=8b6d8d4e8da17ffcade3e29e1c14df0eb84ff7ba");
+        //Verify the User Info response status returned. Check Status Code is 200.
+        res = AppUtils.getResponseByPath(conf.userInfo + "?" + conf.parameterAccessToken);
         jp = AppUtils.getJSonPath(res);
         testUtils.checkStatusIs200(res);
     }
 
     @Test
-    public void TestCase_GetUsersAndCheckAssertion() {
-        res = AppUtils.getResponseByPath("/user/info?access_token=8b6d8d4e8da17ffcade3e29e1c14df0eb84ff7ba");
+    public void TestCase_UsersInfoAndCheckAssertion() {
+        // Verify that the User Info is correct.
+        res = AppUtils.getResponseByPath(conf.userInfo + "?" + conf.parameterAccessToken);
         jp = AppUtils.getJSonPath(res);
         //System.out.println(jp.getString("data.login"));
-        System.out.println(testUtils.getUser(jp));
-        testUtils.checkUserIsAdib(jp);
+        System.out.println(testUtils.getLogin(jp));
+        testUtils.checkLoginIsAdib(jp);
     }
 
-
+    @Test
     public void TestCase_UserHistoryResponseStatus() {
-        //Verify the http User History response status returned. Check Status Code is 200?
-        res = AppUtils.getResponseByPath("/user/link_hostory?access_token=8b6d8d4e8da17ffcade3e29e1c14df0eb84ff7ba");
+        //Verify the User History response status returned. Check Status Code is 200.
+        res = AppUtils.getResponseByPath(conf.userHistory + "?" + conf.parameterAccessToken);
         jp = AppUtils.getJSonPath(res);
         testUtils.checkStatusIs200(res);
     }
 
-    public void TestCase03_GetLinkHistory() {
-        res = AppUtils.getResponseByPath("/user/link_hostory?access_token=8b6d8d4e8da17ffcade3e29e1c14df0eb84ff7ba");
+    @Test
+    public void TestCase_ShortenResponseStatus() {
+        //Verify the  Shorten response status returned. Check Status Code is 200.
+        res = AppUtils.getResponseByPath(conf.shorten + "?" + conf.parameterAccessToken + "&" + conf.longURL + conf.googleLongURL);
         jp = AppUtils.getJSonPath(res);
-        System.out.println("Data: " + jp.get("data"));
+        testUtils.checkStatusIs200(res);
+
     }
 
+    @Test
+    public void TestCase_GetUserHistory() {
+        // Print the User History results.
+        res = AppUtils.getResponseByPath(conf.userHistory + "?" + conf.parameterAccessToken);
+        jp = AppUtils.getJSonPath(res);
+        System.out.println(testUtils.getUserHistoryResult(jp));
+    }
 
-//    public void T03_GetAndroidModelPackageOptions() {
-//       res = AppUtils.getResponseByPath("/gen/clients/android");
-//       jp = AppUtils.getJSonPath(res);
-//
-//       System.out.println("Opt: " + jp.get("modelPackage.opt"));
-//       System.out.println("Description: " + jp.get("modelPackage.description"));
-//       System.out.println("Type: " + jp.get("modelPackage.type"));
-//   }
+    @Test
+    public void TestCase_404ResponseStatus() {
+        //Verify the  Shorten response status not returned. Check Status Code is 404.
+        res = AppUtils.getResponseByPath(conf.wrongShorten + "?" + conf.parameterAccessToken + "&" + conf.longURL + conf.googleLongURL);
+        jp = AppUtils.getJSonPath(res);
+        testUtils.checkStatusIs404(res);
+
+    }
+
+    @Test
+    public void TestCase_CheckShortenStatus() {
+        //Verify the Shorten response status returned. Check Status Code is 200.
+        res = AppUtils.getResponseByPath(conf.shorten + "?" + conf.parameterAccessToken + "&" + conf.longURL + conf.googleLongURL);
+        jp = AppUtils.getJSonPath(res);
+        testUtils.checkStatusOK(jp);
+    }
+
+    @Test
+    public void TestCase_CheckShortenLongURL() {
+        //Verify the Shorten  Long URL.
+        res = AppUtils.getResponseByPath(conf.shorten + "?" + conf.parameterAccessToken + "&" + conf.longURL + conf.googleLongURL);
+        jp = AppUtils.getJSonPath(res);
+        System.out.println(conf.googleLongURL);
+        testUtils.checkShortenLongURL(jp);
+    }
+
 
 }

@@ -11,7 +11,6 @@ import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
 
-
 public class AppUtils {
     //Global Setup Variables
     public static String path;
@@ -19,27 +18,27 @@ public class AppUtils {
     public static String defaultBaseURL = "http://www.google.com";
 
     //Sets Base URI
-    public static void setBaseURI (String baseURL){
+    public static void setBaseURI(String baseURL) {
         RestAssured.baseURI = baseURL;
     }
 
     //Sets base path
-    public static void setBasePath(String basePathTerm){
+    public static void setBasePath(String basePathTerm) {
         RestAssured.basePath = basePathTerm;
     }
 
     //Reset Base URI (after test)
-    public static void resetBaseURI (){
+    public static void resetBaseURI() {
         RestAssured.baseURI = null;
-        }
+    }
 
     //Reset base path
-    public static void resetBasePath(){
+    public static void resetBasePath() {
         RestAssured.basePath = null;
     }
 
     //Sets ContentType
-    public static void setContentType (ContentType Type){
+    public static void setContentType(ContentType Type) {
         given().contentType(Type);
     }
 
@@ -55,8 +54,9 @@ public class AppUtils {
     }
 
     //Returns JsonPath object
-    public static JsonPath getJSonPath (Response res) {
+    public static JsonPath getJSonPath(Response res) {
         String json = res.asString();
         return new JsonPath(json);
     }
+
 }
