@@ -1,7 +1,7 @@
-package elsavier.test;
+package elsevier.test;
 
-import elsavier.test.TestUtils.*;
-import elsavier.config.Configuration;
+import elsevier.test.TestUtils.*;
+import elsevier.config.Configuration;
 
 import org.junit.After;
 import org.junit.Before;
@@ -9,7 +9,7 @@ import org.junit.Before;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import elsavier.main.Utils.*;
+import elsevier.main.Utils.*;
 
 
 public class BaseTest {

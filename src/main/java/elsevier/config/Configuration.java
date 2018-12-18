@@ -1,4 +1,4 @@
-package elsavier.config;
+package elsevier.config;
 
 public class Configuration {
 

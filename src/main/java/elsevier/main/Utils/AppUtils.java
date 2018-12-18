@@ -1,4 +1,4 @@
-package elsavier.main.Utils;
+package elsevier.main.Utils;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

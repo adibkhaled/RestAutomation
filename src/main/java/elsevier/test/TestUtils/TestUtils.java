@@ -1,6 +1,6 @@
-package elsavier.test.TestUtils;
+package elsevier.test.TestUtils;
 
-import elsavier.config.Configuration;
+import elsevier.config.Configuration;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Assert;

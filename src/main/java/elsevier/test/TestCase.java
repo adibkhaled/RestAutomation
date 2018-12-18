@@ -1,7 +1,7 @@
-package elsavier.test;
+package elsevier.test;
 
 import org.junit.Test;
-import elsavier.main.Utils.*;
+import elsevier.main.Utils.*;
 
 
 public class TestCase extends BaseTest {
