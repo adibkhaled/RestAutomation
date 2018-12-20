@@ -2,6 +2,7 @@ package elsevier.config;
 
 public class Configuration {
 
+    //Global Configuration Variables
     public String googleLongURL = "https://stackoverflow.com/questions/37673357/json-path-doesnt-match-expected-sql-date-found-lang-string-restassure";
     public String baseURL = "https://api-ssl.bitly.com";
     public String basePath = "v3";
