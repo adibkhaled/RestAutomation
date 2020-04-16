@@ -1,4 +1,4 @@
-# ElsevierRestAutomation
+# RestAutomation
 
 This is Elsevier Project for exercise. 
 This project is maven project using with rest-assured 3.2.0 and Junit 4.0
