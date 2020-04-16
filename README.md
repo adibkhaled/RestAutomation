@@ -1,6 +1,6 @@
 # RestAutomation
 
-This is Elsevier Project for exercise. 
+This is the Project for exercise. 
 This project is maven project using with rest-assured 3.2.0 and Junit 4.0
 This send rest api data to https://bitly.com to test following method:
 - /v3/user/info
