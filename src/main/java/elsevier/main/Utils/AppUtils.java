@@ -15,7 +15,7 @@ public class AppUtils {
     //Global Setup Variables
     public static String path;
     public static String jsonPathTerm;
-    public static String defaultBaseURL = "http://www.google.com";
+    public static String defaultBaseURL = "http://www.facebook.com";
 
     //Sets Base URI
     public static void setBaseURI(String baseURL) {
