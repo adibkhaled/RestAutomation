@@ -43,7 +43,7 @@ public class TestCase extends BaseTest {
 
     @Test
     public void TestCase_GetUserHistory() {
-        // Print the User History results.
+        // Print the User History results. Test
         res = AppUtils.getResponseByPath(conf.userHistory + "?" + conf.parameterAccessToken);
         jp = AppUtils.getJSonPath(res);
         System.out.println(testUtils.getUserHistoryResult(jp));
